@@ -1,14 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Basic Programming</title>
 </head>
+
 <body>
     <p>Project to test Basic Programming!</p>
+    <h1>Weight on another planet</h1>
+    <p>Do you want to know how much you would weigh on other planets?</p>
+
+    <!-- Gravity:
+    Júpiter = 24.79
+    Venus = 0.87
+    Urano = 0.99
+    Marte = 3.721
+    Mercurio = 3.7
+    Saturno = 10.44
+    Neptuno = 11.15
+    Tierra = 9.807
+    Luna = 1.62 -->
+
+    <script>
+        /* Get weight and planet */
+        var user = prompt("What is your weight?");
+        var planet = prompt("Choose a planet:\n  1. Jupiter\n  2. Venus\n 3. Uranus\
+        \n 4. Mars\n 5. Mercury\n 6. Saturn\n 7. Neptune\n  8. Earth\n 9. Moon ");
+        planet = parseInt(planet);
+        var planetName = "";
+        var weight = parseFloat(user);
+
+        /*Variables*/
+        var g_jupiter = 24.79;
+        var g_venus = 0.87;
+        var g_urano = 0.99;
+        var g_marte = 3.721;
+        var g_mercurio = 3.7
+        var g_saturno = 10.44;
+        var g_neptuno = 11.15;
+        var g_tierra = 9.807;
+        var g_luna = 1.62;
 
 
+      
+
+        if (planet == 1) {
+            planetName = "Jupiter";
+            final_weight = weight * g_jupiter / g_tierra;
+        } else if (planet == 2) {
+            planetName = "Venus";
+            final_weight = weight * g_venus / g_tierra;
+        } else if (planet == 3) {
+            planetName = "Uranus";
+            final_weight = weight * g_urano / g_tierra;
+        } else if (planet == 4) {
+            planetName = "Mars";
+            final_weight = weight * g_marte / g_tierra;
+        } else if (planet == 5) {
+            planetName = "Mercury";
+            final_weight = weight * g_mercurio / g_tierra;
+        } else if (planet == 6) {
+            planetName = "Saturn";
+            final_weight = weight * g_saturno / g_tierra;
+        } else if (planet == 7) {
+            planetName = "Neptune";
+            final_weight = weight * g_neptuno / g_tierra;
+        } else if (planet == 8) {
+            planetName = "Earth";
+            final_weight = weight * g_tierra / g_tierra;
+        } else if (planet == 9) {
+            planetName = "Moon";
+            final_weight = weight * g_luna / g_tierra;
+        } else {
+            document.write("Error, planet not found");
+            throw XPathExpression;
+        }
+
+        var final_weight;
+        /*TO Fixed with 2 decimals*/
+        final_weight = parseFloat(final_weight).toFixed(2);
+
+        document.write("Your weight in " + planetName + " is <strong>" + final_weight + " Kg</strong>");
+    </script>
 </body>
+
 </html>
